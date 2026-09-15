@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Models;
+
+use Heritage\Database\Eloquent\Model;
+use Heritage\Database\Eloquent\SoftDeletes;
+
+class ClassWithTrait extends Model
+{
+    use SoftDeletes;
+
+    protected $table = 'items';
+}

@@ -1,0 +1,10 @@
+<?php
+
+namespace App\Models;
+
+use Heritage\Database\Eloquent\Model;
+
+class SampleClass extends Model
+{
+    protected $table = 'samples';
+}

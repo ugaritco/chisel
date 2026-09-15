@@ -1,0 +1,65 @@
+{
+    "name": "ugarit/chisel",
+    "description": "Toolkit for building scripts that remove unwanted code, files, and dependencies.",
+    "keywords": [
+        "ugarit",
+        "chisel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        },
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com",
+            "role": "Original Creator & Primary Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "heritage/process": "^1.00.00",
+        "nikic/php-parser": "^5.0"
+    },
+    "require-dev": {
+        "ugarit/pint": "^1.00.00",
+        "pestphp/pest": "^4.1.0",
+        "phpstan/phpstan": "^2.1.26",
+        "rector/rector": "^2.1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ugarit\\Chisel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "lint": "pint",
+        "refactor": "rector",
+        "test:lint": "pint --test",
+        "test:unit": "pest",
+        "test:types": "phpstan",
+        "test:refactor": "rector --dry-run",
+        "test": [
+            "@test:lint",
+            "@test:unit",
+            "@test:types",
+            "@test:refactor"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "version": "1.00.00"
+}
